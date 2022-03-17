@@ -1,0 +1,92 @@
+$c1: #2c3333;
+$c2: #395b64;
+$c3: #2666cf;
+$c4: #f5f2e7;
+
+#navbar {
+	position: fixed;
+	width: calc(100% - 0.5rem);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	background-color: $c1;
+	color: $c3;
+	height: 3.5rem;
+	padding-right: 0.25rem;
+	padding-left: 0.25rem;
+	box-shadow: 0px 3px 43px 14px rgba(0, 0, 0, 0.41);
+	z-index: 1000;
+	.pages {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 0.25rem;
+		align-items: center;
+		.item {
+			background-color: $c2;
+			color: $c4;
+			padding: 0.1rem 0.5rem;
+			margin: 0.25rem;
+			height: fit-content;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			transition: all 0.25s, filter 0.1s;
+			user-select: none;
+			font-weight: 700;
+			font-size: larger;
+			&.login {
+				background-color: black;
+				color: white;
+			}
+			&.signup {
+				background-color: white;
+				color: black;
+			}
+			&.current {
+				background-color: $c3;
+				color: $c1;
+			}
+			&:hover {
+				background-color: $c3;
+				color: $c1;
+				border-radius: 0.25rem;
+			}
+			&:active {
+				filter: brightness(1.2);
+			}
+		}
+	}
+	.lside {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		.username {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: " ";
+				width: 1.5rem;
+				height: 1.5rem;
+				background-image: url("../../img/user.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				padding-right: 0.4rem;
+				right: 100%;
+
+				filter: invert(33%) sepia(98%) saturate(1052%)
+					hue-rotate(193deg) brightness(88%) contrast(89%);
+			}
+		}
+		.logo {
+			background-image: url("../../img/shopping.png");
+			height: 3rem;
+			width: 3rem;
+			background-size: contain;
+		}
+	}
+}
+#navspacer {
+	height: 3.5rem;
+}

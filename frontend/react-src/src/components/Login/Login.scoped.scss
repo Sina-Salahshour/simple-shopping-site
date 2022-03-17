@@ -1,0 +1,68 @@
+$c1: #2c3333;
+$c2: #395b64;
+$c3: #2666cf;
+$c4: #f5f2e7;
+
+#login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	form {
+		width: max-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 5rem;
+		margin-top: 5rem;
+		background-color: $c3;
+		color: $c1;
+		gap: 0.75rem;
+		border-radius: 0.5rem;
+		.error {
+			background-color: lightcoral;
+			border-radius: 0.5rem;
+			padding: 1rem;
+		}
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			background-color: $c4;
+			color: $c2;
+			text-align: center;
+			border: none;
+			height: 2rem;
+			border-radius: 0.5rem;
+			&:focus {
+				border-radius: 0.25rem;
+			}
+		}
+		input[type="submit"] {
+			background-color: $c2;
+			color: $c4;
+			padding: 0.1rem 0.5rem;
+			margin: 0.25rem;
+			height: fit-content;
+			border-radius: 0.5rem;
+			cursor: pointer;
+			transition: all 0.25s, filter 0.1s;
+			user-select: none;
+			font-weight: 500;
+			font-size: larger;
+			border-width: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 0.5rem;
+			&:hover {
+				background-color: $c1;
+				color: $c3;
+				border-radius: 0.25rem;
+			}
+			&:active {
+				filter: brightness(1.2);
+			}
+		}
+	}
+}

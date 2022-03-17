@@ -1,0 +1,17 @@
+#home {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 3rem;
+	.logo {
+		background-image: url("../../img/shopping.png");
+		width: 3rem;
+		height: 3rem;
+		background-size: contain;
+		position: absolute;
+		top: -1rem;
+		left: 1rem;
+	}
+}

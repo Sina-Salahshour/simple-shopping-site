@@ -1,0 +1,103 @@
+$c1: #2c3333;
+$c2: #395b64;
+$c3: #2666cf;
+$c4: #f5f2e7;
+
+#orders {
+	user-select: none;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	background-color: $c2;
+	color: $c4;
+	border-radius: 0.5rem;
+	.order {
+		margin: 0.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.25rem 1rem;
+		height: 3rem;
+		background-color: $c1;
+		color: $c3;
+		border-radius: 0.5rem;
+		.pval {
+			padding-left: 0.25rem;
+			padding-right: 0.25rem;
+		}
+		.actions {
+			display: flex;
+			gap: 2rem;
+			align-items: center;
+		}
+		.totalprice {
+			min-width: 10rem;
+		}
+		.counter {
+			display: flex;
+			.val {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: $c4;
+				color: $c2;
+				width: 3rem;
+				border-radius: 0.5rem 0 0 0.5rem;
+			}
+			.btns {
+				display: flex;
+				flex-direction: column;
+				background-color: $c3;
+				color: $c1;
+				width: 1.5rem;
+				border-radius: 0 0.5rem 0.5rem 0;
+				text-align: center;
+				.btn:hover {
+					cursor: pointer;
+					background-color: $c1;
+					color: $c3;
+				}
+			}
+		}
+		.delete,
+		.save,
+		.buy {
+			background-image: url("../../img/trash.svg");
+			width: 2rem;
+			height: 2rem;
+			background-size: contain;
+			cursor: pointer;
+			filter: invert(31%) sepia(32%) saturate(491%) hue-rotate(146deg)
+				brightness(95%) contrast(89%);
+			&:hover {
+				filter: invert(33%) sepia(98%) saturate(1052%)
+					hue-rotate(193deg) brightness(88%) contrast(89%);
+			}
+			&:active {
+				filter: invert(99%) sepia(31%) saturate(291%) hue-rotate(317deg)
+					brightness(100%) contrast(93%);
+			}
+		}
+		.save {
+			background-image: url("../../img/save.svg");
+		}
+		.buy {
+			background-image: url("../../img/buy.svg");
+		}
+	}
+	.sumorders {
+		background-color: $c3;
+		color: $c1;
+		.buy {
+			filter: invert(16%) sepia(9%) saturate(627%) hue-rotate(131deg)
+				brightness(93%) contrast(87%);
+			&:hover {
+				filter: invert(33%) sepia(9%) saturate(1552%) hue-rotate(146deg)
+					brightness(93%) contrast(91%);
+			}
+			&:active {
+				filter: invert(100%) sepia(10%) saturate(1748%)
+					hue-rotate(313deg) brightness(101%) contrast(92%);
+			}
+		}
+	}
+}

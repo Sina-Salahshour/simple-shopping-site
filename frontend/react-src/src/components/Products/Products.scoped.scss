@@ -1,0 +1,82 @@
+$c1: #2c3333;
+$c2: #395b64;
+$c3: #2666cf;
+$c4: #f5f2e7;
+
+#products {
+	margin-top: 3rem;
+	display: flex;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	user-select: none;
+	.product {
+		text-align: center;
+		padding: 1rem;
+		background-color: $c1;
+		color: $c3;
+		border-radius: 0.5rem;
+		min-width: 15rem;
+		h1 {
+			color: $c4;
+		}
+		.pval {
+			padding-left: 0.25rem;
+			padding-right: 0.25rem;
+		}
+		.buybox {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 0.25rem;
+			.addbtn {
+				background-color: $c2;
+				color: $c4;
+				padding: 0 0.6rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0.5rem;
+				height: 3rem;
+				cursor: pointer;
+				&:hover {
+					background-color: $c3;
+					color: $c1;
+				}
+			}
+			.counter {
+				height: 3rem;
+				display: flex;
+				.val {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: $c4;
+					color: $c2;
+					width: 3rem;
+					border-radius: 0.5rem 0 0 0.5rem;
+				}
+				.btns {
+					display: flex;
+					flex-direction: column;
+					background-color: $c3;
+					color: $c1;
+					width: 1.5rem;
+					border-radius: 0 0.5rem 0.5rem 0;
+					.btn:hover {
+						cursor: pointer;
+						background-color: $c1;
+						color: $c3;
+					}
+				}
+			}
+		}
+		.loginfirst {
+			color: red;
+		}
+	}
+}
